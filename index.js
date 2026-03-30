@@ -7,7 +7,7 @@ const continueBtn = document.getElementById('continueBtn');
 const texts = [
   "Hélô zịtt, anh là gà aka uvgnourt đâyy",
     "Chúc bé zịtt một ngày sinh nhật thật rực rỡ ne!!",
-    "Tuổi mới mong em luônn tươi cười, mong em luonn vượt qua được thử thách!",
+    "Tuổi mới mong em luônn tươi cười, mong em luonn vượt qua mọi thử thách!",
     "Còn tiếp...",
   
 ];

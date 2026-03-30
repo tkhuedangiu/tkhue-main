@@ -6,7 +6,7 @@ const personalBtn = document.getElementById('personalBtn');
 // ====================== TEXT TRANG 2 (bạn thay nội dung tùy ý) ======================
 const texts2 = [
   "Anh chúc zịtt không dừng bước trên con đường của mình",
-  "Zịtt giỏii mà!! Em sẽ làm được thôii!!",
+  "Zịtt giỏii mà!! Em sẽ làm được thôii 'YOU WORTH IT'!!",
   "Lỡ mà có khó khăn thì cũng đừng lo nhaa vì luôn có rất nhiều người yêu thương và giúp đỡ em và...",
   "Có thể zịtt hongg cần nhưng gà vẫn luônn ở đây á😊!.",
   "❤️20 rực rỡ nhé❤️"
