@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff8488, #f8c5b7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Pacifico', cursive;
+    overflow: hidden;
+    position: relative;
+}
+
+.gift {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gift-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gift:hover {
+    transform: scale(1.05);
+}
+
+.ribbon {
+    position: absolute;
+    background: #fff;
+}
+
+.ribbon.vertical {
+    width: 20px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ribbon.horizontal {
+    height: 20px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: white;
+    position: absolute;
+    z-index: 10;
+    font-size: 1.8rem;
+    transform-origin: center;
+    animation: expandFromCenter 3s ease-out forwards;
+    opacity: 0;
+    width: 900px;
+    max-height: 620px;           /* ← tăng lên tí cho thoải mái */
+    overflow-y: auto;            /* ← nếu dài quá sẽ cuộn đẹp */
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+}
+
+.card.show {
+    display: block;
+}
+
+.confetti {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: fall 5s infinite;
+}
+
+.img-gift {
+    margin: 25px auto 10px;
+    border-radius: 30px;
+    width: 320px;
+    height: 220px;
+    background-image: url(./tkhue.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+#birthdayText {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 0px;
+    /* font-family: Arial, sans-serif; */
+}
+
+@keyframes fall {
+    0% { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(100vh) rotate(360deg); 
+        opacity: 0; 
+    }
+}
+
+@keyframes expandFromCenter {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+/* ==================== HIỆU ỨNG ĐẸP CHO HÌNH VÀ BUTTON ==================== */
+.img-gift {
+    margin: 25px auto 10px;
+    border-radius: 30px;
+    width: 320px;
+    height: 220px;
+    background-image: url(./tkhue.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    animation: popIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+#continueBtn {
+    opacity: 0;
+    animation: fadeInUp 0.9s ease-out 0.6s forwards;
+}
+
+/* Keyframes cho hình */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(50px);
+    }
+    60% {
+        transform: scale(1.12) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Keyframes cho button */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}  
