@@ -65,7 +65,7 @@ body {
     animation: expandFromCenter 3s ease-out forwards;
     opacity: 0;
     width: 900px;
-    max-height: 680px;           /* ← tăng lên tí cho thoải mái */
+    max-height: 800px;           /* ← tăng lên tí cho thoải mái */
     overflow-y: auto;            /* ← nếu dài quá sẽ cuộn đẹp */
     transition: transform 1s ease-out, opacity 0.5s ease-out;
 }
