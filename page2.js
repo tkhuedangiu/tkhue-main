@@ -14,6 +14,7 @@ const texts2 = [
 
 // Hàm typewriter (copy từ file cũ)
 function typeWriter(texts, element, textIndex = 0, i = 0) {
+    
     if (textIndex < texts.length) {
         const text = texts[textIndex];
         if (i < text.length) {
@@ -26,10 +27,19 @@ function typeWriter(texts, element, textIndex = 0, i = 0) {
         }, 1000);
         }
     }else {
-        // === CHỮ ĐÃ GÕ XONG → HIỆN BUTTON ===
+        // === CHỮ ĐÃ GÕ XONG → HIỆN HÌNH MỚI + BUTTON ===
         setTimeout(() => {
-            personalBtn.classList.remove('hidden');
-        }, 800);   // delay 0.8 giây cho mượt
+            // Tạo hình mới (giống hệt trang 1)
+            const imgGift2 = document.createElement('div');
+            imgGift2.classList.add('img-gift');
+            imgGift2.style.backgroundImage = "url(./tkhue2.jpg)";   // ← THAY TÊN FILE HÌNH CỦA BẠN VÀO ĐÂY
+            message2.appendChild(imgGift2);
+
+            // Hiện button cá nhân sau khi hình hiện
+            setTimeout(() => {
+                personalBtn.classList.remove('hidden');
+            }, 600);
+        }, 1000);
     }
 }
 
@@ -46,6 +56,14 @@ window.addEventListener('load', () => {
     // Bắt đầu gõ chữ
     setTimeout(() => {
         typeWriter(texts2, birthdayText2);
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            confetti.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(confetti);
+        }
     }, 800);
 });
 // ====================== NÚT TRANG CÁ NHÂN ======================

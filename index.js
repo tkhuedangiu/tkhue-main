@@ -52,7 +52,7 @@ function typeWriter(texts, element, textIndex = 0, i = 0) {
         setTimeout(() => {
             continueBtn.classList.remove('hidden');
         }, 600);
-    }, 1300);
+    }, 1000);
     }
 }
 
